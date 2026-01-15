@@ -1,14 +1,7 @@
 /* Magnific Popup CSS */
 .mfp-bg {
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 1042;
-  overflow: hidden;
-  position: fixed;
-  background: #000000ff;
-  opacity: 0.8; }
+  background: rgba(0,0,0,0.85) !important;
+}
 
 .mfp-wrap {
   top: 0;
@@ -40,12 +33,11 @@
   display: none; }
 
 .mfp-content {
-  position: relative;
-  display: inline-block;
-  vertical-align: middle;
-  margin: 0 auto;
-  text-align: center;
-  z-index: 1045; }
+  display: block !important;
+  margin: auto !important;
+  text-align: center !important;
+  vertical-align: middle !important;
+}
 
 .mfp-inline-holder .mfp-content,
 .mfp-ajax-holder .mfp-content {
@@ -243,14 +235,12 @@ button::-moz-focus-inner {
 
 /* Main image in popup */
 img.mfp-img {
-  width: auto;
-  max-width: 100%;
-  height: auto;
   display: block;
-  line-height: 0;
-  box-sizing: border-box;
-  padding: 40px 0 40px;
-  margin: 0 auto; }
+  margin: auto;
+  max-width: 90vw;
+  max-height: 90vh;
+  padding: 40px 0;
+}
 
 /* The shadow behind the image */
 .mfp-figure {
@@ -346,11 +336,16 @@ img.mfp-img {
   .mfp-arrow-right {
     -webkit-transform-origin: 100%;
     transform-origin: 100%; }
- .mfp-content  {
+ .mfp-container {
   display: flex !important;
   align-items: center !important;       /* vertical center */
   justify-content: center !important;   /* horizontal center */
-  padding-left: 0 !important;           /* left-right padding remove */
-  padding-right: 0 !important;
+  position: fixed !important;           /* absolute → fixed */
+  width: 100% !important;
+  height: 100% !important;
+  top: 0;
+  left: 0;
+  padding: 0 !important;
+  box-sizing: border-box;
   text-align: center;
 } }
